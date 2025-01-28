@@ -1,0 +1,38 @@
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Aumentar espaço entre os elementos */
+  max-width: 600px; /* Aumentar largura máxima */
+  margin: 0 auto;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 1rem; /* Aumentar padding para maior espaçamento */
+  border-radius: 10px; /* Aumentar borda arredondada */
+  border: 1px solid #ffffff;
+}
+
+.redes-sociais {
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 0; /* Adicionar padding para maior espaçamento */
+}
+
+.redes-sociais a {
+  margin: 1rem; /* Aumentar margem */
+  font-size: 40px; /* Aumentar tamanho da fonte */
+  color: #000000;
+  text-decoration: none;
+}
+
+.redes-sociais a:hover {
+  color: #6b0ba3; 
+}
+
+.container {
+  min-height: 100vh; 
+}

@@ -1,0 +1,50 @@
+.tecnologias-container {
+  display: flex;
+  font-family: 'Gochi Hand', cursive;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem; /* Aumentar padding para maior espaçamento */
+}
+
+.tecnologias-marquee {
+  font-size: 4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.tecnologias-track {
+  display: flex;
+  animation: scroll 30s linear infinite; /* Girar infinitamente */
+}
+
+.tecnologia-item {
+  display: inline-block;
+  text-align: center;
+  padding: 2rem; /* Aumentar padding para maior espaçamento */
+}
+
+.tecnologia-item p {
+  margin-top: 1rem;
+  font-size: 1.1rem; /* Aumentar tamanho do texto */
+  color: rgb(255, 255, 255);
+}
+
+/* Adicione animação para o efeito marquee */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Ajustar a distância de translação para suavidade contínua */
+  }
+}
+
+.tecnologias-track::after {
+  content: '';
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100%;
+}

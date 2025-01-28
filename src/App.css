@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+@font-face {
+  font-family: 'West Avenue';
+  src: url('caminho/para/west-avenue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html {
+  scroll-behavior: smooth; /* Ativa rolagem suave */
+}
+
+body {
+  background: rgb(56,8,108);
+  background: linear-gradient(0deg, rgba(56,8,108,1) 0%, rgba(43,8,82,1) 3%, rgba(71,14,131,1) 14%, rgba(109,30,190,1) 23%, rgba(117,17,219,1) 38%, rgba(143,32,255,1) 51%, rgba(151,49,254,1) 57%, rgba(159,75,244,1) 64%, rgba(165,92,238,1) 76%, rgba(183,123,242,1) 100%);
+  margin: 0;
+  padding: 0; /* Remove o padding padrão */
+  font-family: 'West Avenue', sans-serif;
+  box-sizing: border-box; /* Garante que o padding seja incluído no tamanho total */
+}
+
+#portfolio-title {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  transition: all 1.3s ease-in-out;
+  font-size: 3rem;
+ 
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container principal */
+section {
+ 
+
+  padding: 3rem 1rem; /* Espaçamento interno */
+  margin: 3rem 0; /* Margem externa entre seções */
+  box-sizing: border-box; /* Inclui padding no tamanho total */
+  opacity: 0; /* Inicialmente escondido */
+  transform: translateY(40px); /* Inicialmente deslocado para baixo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transições suaves */
+}
+
+section.visible {
+  opacity: 1; /* Visível quando em viewport */
+  transform: translateY(0); /* Retorna à posição original */
+}
+
+
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(19, 0, 0);
+  padding: 1rem;
+  position: relative;
+}
+
+
+
+/* Botão do menu hambúrguer */
+.hamburguer {
+  font-size: 2rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color:rgb(209, 131, 233);
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  cursor: pointer;
+  z-index: 50;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Adicionar animação */
+}
+
+.hamburguer:hover {
+  background-color: rgba(130, 0, 156, 0.948);
+  transform: rotate(90deg); /* Girar ao passar o mouse */
+}
+
+.hamburguer:focus {
+  outline: none;
+ 
+}
+
+/* Menu lateral (ao abrir) */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 2, 52, 0.561);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.menu-lateral.ativo {
+  display: flex;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu-lateral ul li a {
+  font-size: 2.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+
+.menu-lateral ul li a {
+  
+  font-family: 'West Avenue', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.menu-lateral ul li a:hover {
+  transform: scale(1.1);
+  color: #f07eac;
+}
+
+.menu-lateral button {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  background: none;
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-lateral button:hover {
+  color: #ff0000;
+}
+
+/* Estilos específicos para cada seção */
+
+/* Home Section */
+#home {
+  
+ 
+  
+}
+
+/* About Section */
+#about {
+    background: url('public/Untitled (2).png') center/cover no-repeat; /* Fundo com imagem */
+    min-height: 70vh;
+    padding: 40vh 30vw;
+    color: hsl(198, 1%, 29%);
+    font-family: 'Gochi Hand', cursive;
+    text-align: left;
+    font-size: 130%; 
+  h2 {
+      line-height: 1.5;
+      display: inline;
+      background-image: linear-gradient(          transparent 50%,          #ffe9b6 50%,          #d1c704 85%,          transparent 85%,          transparent 100%      );
+      background-repeat: no-repeat;
+      background-size: 0% 100%;
+      animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+      -webkit-animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+}
+  
+}
+
+@keyframes animatedBackground {
+      to {
+          background-size: 100% 100%;
+      }
+  }
+
+/* Technologies Section */
+#technologies {
+  background: url('public/Untitled.png') center/cover no-repeat; /* Fundo com imagem */
+  color: rgb(255, 255, 255);
+
+}
+
+/* Projects Section */
+#projects {
+
+  color: white;
+  min-height: 100vh;
+  
+}
+
+/* Contact Section */
+#contact {
+  background-color: white;
+ 
+  color: white;
+  
+}
+
+/* Ajuste geral para espaçamentos */
+section {
+
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  padding: 100px 20px;
+  /*Espaçamentointernogrande*/margin-bottom: 100px;
+  /*Espaçamentoentreasseções*/border-radius: 12px;
+   /* Cantos arredondados nas seções */;
+  -webkit-transition: opacity 0.8s ease, transform 0.8s ease;
+  -moz-transition: opacity 0.8s ease, transform 0.8s ease;
+  -ms-transition: opacity 0.8s ease, transform 0.8s ease;
+  -o-transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+@keyframes infiniteFade {
+  0% {
+    opacity: 0.2;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+  50% {
+    opacity: 1;
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+}
+  100% {
+    opacity: 0.2;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+}
+
+@keyframes textColorChange {
+  0% {
+    color: #1bffec;
+  }
+  50% {
+    color: #f5cd1d;
+  }
+  100% {
+    color: #ff0c85;
+  }
+}
+
+/* Aplica animação às letras individualmente */
+.animated-text span {
+  
+  display: inline-block;
+  animation: infiniteFade 1s ease-in-out infinite;
+  -webkit-animation: infiniteFade 5s ease-in-out infinite;
+}
+
+.animated-text span:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.animated-text span:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+
+/* Animação infinita para textos */
+.animated-text {
+  display: inline-block;
+  animation: textColorChange 3s ease infinite;
+}
+
+/* Adicione uma animação ao parágrafo ou outros textos */
+.animated-paragraph {
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+/* Botão fixo no canto superior direito */
+.fixed-moon-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(209, 131, 233, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-moon-button:hover {
+  background-color: rgba(130, 0, 156, 0.948);
+  transform: scale(1.1);
+}
+
+.fixed-moon-button svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+.fixed-moon-button:hover {
+  background-color: rgba(130, 0, 156, 0.948);
+  transform: scale(1.1);
+}
+
+.fixed-moon-button svg {
+  width: 24px;
+  height: 24px;
+  fill: white;}
