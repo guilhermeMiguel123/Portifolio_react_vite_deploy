@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
@@ -49,9 +49,9 @@ const AnimationSVG = () => {
         },
         5.1
       )
-      .add(() => timeline.play(0), 8.2);
+      .add(() => { timeline.play(0); }, 8.2);
 
-    return () => timeline.kill(); // Limpar a timeline ao desmontar
+    return () => { timeline.kill(); }; // Limpar a timeline ao desmontar
   }, []);
 
   return (

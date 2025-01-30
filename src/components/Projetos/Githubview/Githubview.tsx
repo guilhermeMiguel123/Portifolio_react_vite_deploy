@@ -1,7 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const GithubView = () => {
-  const [repositorios, setRepositorios] = useState([]);
+  interface Repository {
+    id: number;
+    name: string;
+    html_url: string;
+    language: string | null;
+  }
+  
+  const [repositorios, setRepositorios] = useState<Repository[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +24,7 @@ const GithubView = () => {
         setRepositorios(data);
         setLoading(false);
       } catch (error) {
-        console.error(error.message);
+        console.error((error as Error).message);
         setLoading(false);
       }
     };

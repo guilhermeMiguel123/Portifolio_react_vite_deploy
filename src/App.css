@@ -168,7 +168,7 @@ nav {
 
 /* About Section */
 #about {
-    background: url('public/Untitled (2).png') center/cover no-repeat; /* Fundo com imagem */
+    background: url('/Untitled (2).png') center/cover no-repeat; /* Fundo com imagem */
     min-height: 70vh;
     padding: 40vh 30vw;
     color: hsl(198, 1%, 29%);
@@ -195,7 +195,7 @@ nav {
 
 /* Technologies Section */
 #technologies {
-  background: url('public/Untitled.png') center/cover no-repeat; /* Fundo com imagem */
+  background: url('/Untitled.png') center/cover no-repeat; /* Fundo com imagem */
   color: rgb(255, 255, 255);
 
 }
