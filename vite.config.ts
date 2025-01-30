@@ -1,20 +1,8 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   base: "/Portifolio_react_vite_deploy",
-  build: {
-    rollupOptions: {
-      onwarn(warning, warn) {
-        if (
-          warning.code === "CSS_SYNTAX_ERROR" || // Ignora erros de CSS
-          warning.code === "JS_COMMENT_IN_CSS"  // Ignora "//" no CSS
-        ) {
-          return;
-        }
-        warn(warning);
-      },
-    },
-  },
-});
+})
