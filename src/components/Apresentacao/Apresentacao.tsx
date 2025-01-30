@@ -8,7 +8,7 @@ const Apresentacao = () => {
       <h1 className="animated-text">
         <span> Olá, eu sou o Guilherme Miguel :)
        
-        <br /> <a href="src/assets/Curriculo desinvolvedor.pdf" className="btn-curriculo" download>Baixar Currículo</a></span>
+        <br /> <a href="public\CV_Guilherme_MIguel.pdf" className="btn-curriculo" download>Baixar Currículo</a></span>
         </h1>
        
        

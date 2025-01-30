@@ -83,7 +83,7 @@ function App() {
       {/* Navegação */}
       <nav className="p-4 flex justify-between items-center">
         <h1 id="portfolio-title" className="text-3xl font-bold text-white">
-          portifolio
+       Portifólio
         </h1>
         <button onClick={toggleTheme} className="fixed-moon-button">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ function App() {
         <ul className="flex flex-col gap-4 mt-4">
           <li>
             <a href="#home" onClick={toggleMenu} className="block py-2">
-              Lar
+              Inicio
             </a>
           </li>
           <li>
