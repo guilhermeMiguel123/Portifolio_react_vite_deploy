@@ -24,20 +24,6 @@ function App() {
   };
 
   useEffect(() => {
-    const animateTitle = () => {
-      gsap.to("#portfolio-title", {
-        textShadow: "0px 0px 20px rgba(255, 255, 255, 1)",
-        scale: 1.2,
-        duration: 1,
-        repeat: -1,
-        yoyo: true,
-      });
-    };
-
-    animateTitle();
-  }, []);
-
-  useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll<HTMLElement>("section");
       const menu = document.querySelector<HTMLElement>(".hamburguer");
