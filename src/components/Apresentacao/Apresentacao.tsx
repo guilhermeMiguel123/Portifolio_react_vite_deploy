@@ -9,7 +9,7 @@ const Apresentacao = () => {
         <span> Olá, eu sou o Guilherme Miguel :)
        
         <br /><a 
-  href="https://drive.google.com/uc?export=download&id=16Sy6db29VqT87g8_N01jQuFlnKvMvQ1x" 
+  href="https://drive.google.com/file/d/1Gt_rlIlJekwtm8IRnSb6mdhc3zarKpvE/view?usp=sharing" 
   className="btn-curriculo" 
   download
 >
